@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'eczar';
+    src: url('fonts/Eczar/Eczar-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'quicksand';
+    src: url('fonts/Quicksand/Quicksand-VariableFont_wght.ttf');
+}
+
+:root {
+    --background: #679AAC;
+    --primary: #F8F7E5;
+    --secondary: #1D1D1D;
+}
+
+.hero, .about-me, .skills, .portfolio, .references, .contact-footer {
+    height: 100vh;
+    width: 100%;
+}
+
+.hero, .references {
+    background-color: var(--background);
+}
+
+.about-me, .portfolio {
+    background-color: var(--primary);
+}
+
+.skills, .contact-footer {
+    background-color: var(--secondary);
+}
