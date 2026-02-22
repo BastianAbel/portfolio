@@ -12,6 +12,13 @@
     --background: #679AAC;
     --primary: #F8F7E5;
     --secondary: #1D1D1D;
+    --highlight-1: #FF834F;
+    --highlight-2: #F9AF42;
+}
+
+html, body {
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 .hero, .about-me, .skills, .portfolio, .references, .contact-footer {
@@ -29,4 +36,109 @@
 
 .skills, .contact-footer {
     background-color: var(--secondary);
+}
+
+.hero-container, 
+.about-me-container, 
+.skills-container, 
+.portfolio-container, 
+.references-container, 
+.contact-footer-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 72px;
+}
+
+.header-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 112px;
+}
+
+.github-header-icon,
+.linkedin-header-icon,
+.mail-header-icon,
+.open-menu-button {
+    height: 32px;
+    width: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.github-header-icon {
+    background-image: url('img/icons/github-icon.svg');
+    
+    &&:hover {
+        background-image: url('img/icons/github-icon-hover.svg');
+    }
+}
+
+.linkedin-header-icon {
+    background-image: url('img/icons/linkedin-icon.svg');
+
+    &&:hover {
+        background-image: url('img/icons/linkedin-icon-hover.svg');
+    }
+}
+
+.mail-header-icon {
+    background-image: url('img/icons/mail-icon.svg');
+
+    &&:hover {
+        background-image: url('img/icons/mail-icon-hover.svg');
+    }
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    img {
+        height: 40px;
+    }
+
+    span {
+        font-family: 'quicksand';
+        font-weight: 700;
+        font-size: 24px;
+        color: white;
+    }
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .lang-change-button {
+        height: 40px;
+        width: 40px;
+        border: solid 1px var(--primary);
+        border-radius: 100px;
+        font-family: 'quicksand';
+        font-weight: 600;
+        font-size: 18px;
+        color: var(--primary);
+
+        &&:hover {
+            background-color: var(--highlight-1);
+        }
+    }
+
+    .open-menu-button {
+        background-image: url('img/icons/open-menu-icon.svg');
+        
+        &&:hover {
+            background-image: url('img/icons/open-menu-icon-hover.svg');
+        }
+    }
+
 }
