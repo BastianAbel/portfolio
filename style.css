@@ -17,6 +17,7 @@
 
     --header-horizontal-padding: 72px;
     --header-vertical-padding: 24px;
+    --navbar-height: 130px;
 }
 
 html, body {
@@ -167,4 +168,40 @@ header {
         }
     }
 
+}
+
+nav {
+    position: fixed;
+    right: var(--header-horizontal-padding);
+    top: 50%;
+    margin-top: calc(var(--navbar-height) / 2 * -1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 12px;
+    height: var(--navbar-height);
+}
+
+.navbar-bullet {
+    height: 8px;
+    width: 8px;
+    border-radius: 4px;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &&:hover {
+        background-color: var(--highlight-2);
+    }
+}
+
+.dark-bullet {
+    background-color: var(--secondary);
+}
+
+.current-selected-bullet {
+    rotate: 135deg;
+    border-radius: 0;
+    background-color: var(--highlight-1) !important;
+    transition: all 0.4s;
 }
