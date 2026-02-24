@@ -10,3 +10,8 @@ button {
     border: none;
     background-color: rgba(255, 255, 255, 0);
 }
+
+.d-none {
+    display: none !important;
+    visibility: hidden !important;
+}
