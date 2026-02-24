@@ -132,16 +132,29 @@ header {
         font-weight: 700;
         font-size: 24px;
         color: white;
-        transition: all 1s;
+        transition: all 0.6s;
     }
 
+    &&:hover {
+        span {
+            color: var(--highlight-1);
+        }
+    }
+    
     &&:disabled {
         cursor: default;
+        &&:hover {
+            span {
+                color: var(--primary);
+            }
+        }
     }
 }
 
-.dark-logo span {
-    color: var(--secondary);
+.dark-logo {
+    span {
+        color: var(--secondary);
+    }
 }
 
 .scrolled {
