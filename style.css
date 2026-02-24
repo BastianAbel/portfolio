@@ -132,7 +132,16 @@ header {
         font-weight: 700;
         font-size: 24px;
         color: white;
+        transition: all 1s;
     }
+
+    &&:disabled {
+        cursor: default;
+    }
+}
+
+.dark-logo span {
+    color: var(--secondary);
 }
 
 .scrolled {

@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/icons/dev-icon.svg" type="image/x-icon">
     <script src="scripts/script.js"></script>
+    <script src="scripts/scroll-behavior.js"></script>
 </head>
 <body>
     <nav>
-        <a href="#hero" class="navbar-bullet current-selected-bullet"></a>
-        <a href="#about-me" class="navbar-bullet dark-bullet"></a>
-        <a href="#skills" class="navbar-bullet"></a>
-        <a href="#portfolio" class="navbar-bullet"></a>
-        <a href="#references" class="navbar-bullet"></a>
-        <a href="#contact-footer" class="navbar-bullet"></a>
+        <a href="#hero" id="hero-bullet" class="navbar-bullet" onclick="switchCategory(0)"></a>
+        <a href="#about-me" id="about-me-bullet" class="navbar-bullet" onclick="switchCategory(1)"></a>
+        <a href="#skills" id="skills-bullet" class="navbar-bullet" onclick="switchCategory(2)"></a>
+        <a href="#portfolio" id="portfolio-bullet" class="navbar-bullet" onclick="switchCategory(3)"></a>
+        <a href="#references" id="references-bullet" class="navbar-bullet" onclick="switchCategory(4)"></a>
+        <a href="#contact-footer" id="contact-footer-bullet" class="navbar-bullet" onclick="switchCategory(5)"></a>
     </nav>
     <section class="hero" id="hero">
         <div class="hero-container">
             <header>
-                <div class="header-logo" id="header-logo">
+                <button class="header-logo" id="header-logo" onclick="scrollToTop()">
                     <img src="img/icons/dev-icon.svg" alt="">
                     <span>Abel</span>
-                </div>
+                </button>
                 <div class="header-menu">
                     <button class="lang-change-button">DE</button>
                     <button class="open-menu-button"></button>
