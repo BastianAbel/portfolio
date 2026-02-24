@@ -1,4 +1,5 @@
 let currentCategory = 0;
+let scrollCooldown = 0;
 const classNames = {
     'selected' : 'current-selected-bullet',
     'darkColor' : 'dark-bullet',
@@ -11,6 +12,14 @@ const navbarBulletIDs = [
     'portfolio-bullet',
     'references-bullet',
     'contact-footer-bullet'
+];
+const navbarIDs = [
+    'hero',
+    'about-me',
+    'skills',
+    'portfolio',
+    'references',
+    'contact-footer'
 ];
 
 function switchCategory(categoryNr) {
@@ -73,16 +82,46 @@ function updateHeader(categoryNr) {
     }
 }
 
-function scrollToTop() {
-    window.scrollTo(0, 0);
-    switchCategory(0);
+function scrollToSection(sectionNr) {
+    switchCategory(sectionNr);
+    const elementRef = document.getElementById(navbarIDs[sectionNr]);
+    elementRef.scrollIntoView();
 }
 
+document.addEventListener('keydown', (event) => {
+    if(event.key === 'ArrowDown') {
+        scrollDown();
+    } else if(event.key === 'ArrowUp') {
+        scrollUp();
+    }
+}
+)
 
+window.addEventListener("wheel", (event) => {
+    const currentTime = new Date().getTime();
+    if(scrollCooldown + 300 < currentTime) {
+        if (event.deltaY > 0) {
+            scrollDown();
+        } else if (event.deltaY < 0) {
+            scrollUp();
+        }
+        scrollCooldown = currentTime;
+    }
+});
 
+function scrollDown() {
+    if(currentCategory < 5) {
+        scrollToSection(currentCategory + 1);
+    }
+}
 
+function scrollUp() {
+    if(currentCategory > 0) {
+        scrollToSection(currentCategory - 1);
+    }
 
-
+}
+    
 document.addEventListener("DOMContentLoaded", () => {
   const scrollPos = window.scrollY;
   const spacingTop = 65;

@@ -12,17 +12,17 @@
 </head>
 <body>
     <nav>
-        <a href="#hero" id="hero-bullet" class="navbar-bullet" onclick="switchCategory(0)"></a>
-        <a href="#about-me" id="about-me-bullet" class="navbar-bullet" onclick="switchCategory(1)"></a>
-        <a href="#skills" id="skills-bullet" class="navbar-bullet" onclick="switchCategory(2)"></a>
-        <a href="#portfolio" id="portfolio-bullet" class="navbar-bullet" onclick="switchCategory(3)"></a>
-        <a href="#references" id="references-bullet" class="navbar-bullet" onclick="switchCategory(4)"></a>
-        <a href="#contact-footer" id="contact-footer-bullet" class="navbar-bullet" onclick="switchCategory(5)"></a>
+        <a id="hero-bullet" class="navbar-bullet" onclick="scrollToSection(0)"></a>
+        <a id="about-me-bullet" class="navbar-bullet" onclick="scrollToSection(1)"></a>
+        <a id="skills-bullet" class="navbar-bullet" onclick="scrollToSection(2)"></a>
+        <a id="portfolio-bullet" class="navbar-bullet" onclick="scrollToSection(3)"></a>
+        <a id="references-bullet" class="navbar-bullet" onclick="scrollToSection(4)"></a>
+        <a id="contact-footer-bullet" class="navbar-bullet" onclick="scrollToSection(5)"></a>
     </nav>
     <section class="hero" id="hero">
         <div class="hero-container">
             <header>
-                <button class="header-logo" id="header-logo" onclick="scrollToTop()">
+                <button class="header-logo" id="header-logo" onclick="scrollToSection(0)">
                     <img src="img/icons/dev-icon.svg" alt="">
                     <span>Abel</span>
                 </button>
