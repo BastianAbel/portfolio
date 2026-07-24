@@ -4,7 +4,7 @@ const classNames = {
     'selected' : 'current-selected-bullet',
     'darkColor' : 'dark-bullet',
     'darkLogo' : 'dark-logo',
-    'darkMenuButton' : 'dark-menu-button'
+    'darkHeaderMenu' : 'header-menu-dark'
 }
 const navbarBulletIDs = [
     'hero-bullet',
@@ -58,9 +58,9 @@ function toggleLogoDisabled(categoryNr) {
 
 function setContrast() {
     const headerRef = document.getElementById('header-logo');
-    const menuButtonRef = document.getElementById('open-menu-button');
+    const menuButtonRef = document.getElementById('header-menu');
     headerRef.classList.add(classNames['darkLogo']);
-    menuButtonRef.classList.add(classNames['darkMenuButton']);
+    menuButtonRef.classList.add(classNames['darkHeaderMenu']);
     for (let b = 0; b < navbarBulletIDs.length; b++) {
         const bulletRef = document.getElementById(navbarBulletIDs[b]);
         bulletRef.classList.add(classNames['darkColor']);
@@ -69,9 +69,9 @@ function setContrast() {
 
 function removeContrast() {
     const headerRef = document.getElementById('header-logo');
-    const menuButtonRef = document.getElementById('open-menu-button');
+    const menuButtonRef = document.getElementById('header-menu');
     headerRef.classList.remove(classNames['darkLogo']);
-    menuButtonRef.classList.remove(classNames['darkMenuButton']);
+    menuButtonRef.classList.remove(classNames['darkHeaderMenu']);
     for (let b = 0; b < navbarBulletIDs.length; b++) {
         const bulletRef = document.getElementById(navbarBulletIDs[b]);
         bulletRef.classList.remove(classNames['darkColor']);

@@ -167,6 +167,17 @@ header {
     align-items: center;
     gap: 16px;
 
+    &.header-menu-dark {
+        .lang-change-button {
+            color: var(--secondary);
+            border-color: var(--secondary);
+        }
+
+        .open-menu-button {
+            color: var(--secondary);
+        }
+    }
+
     .lang-change-button {
         height: 40px;
         width: 40px;
@@ -176,6 +187,7 @@ header {
         font-weight: 600;
         font-size: 18px;
         color: var(--primary);
+        transition: all 0.4s;
 
         &&:hover {
             background-color: var(--highlight-1);
@@ -186,14 +198,9 @@ header {
         color: var(--primary);
         transition: all 0.4s;
 
-        &.dark-menu-button {
-            color: var(--secondary);
-        }
-        
         &&:hover {
             color: var(--highlight-1);
         }
-
     }
 
 }
