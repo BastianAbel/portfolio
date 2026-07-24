@@ -183,11 +183,20 @@ header {
     }
 
     .open-menu-button {
-        background-image: url('img/icons/open-menu-icon.svg');
+        /* background-image: url('img/icons/open-menu-icon.svg'); */
+        color: var(--primary);
+        transition: all 0.4s;
+
+        &.dark-menu-button {
+            /* background-image: url('img/icons/open-menu-icon-dark.svg'); */
+            color: var(--secondary);
+        }
         
         &&:hover {
-            background-image: url('img/icons/open-menu-icon-hover.svg');
+            /* background-image: url('img/icons/open-menu-icon-hover.svg'); */
+            color: var(--highlight-1);
         }
+
     }
 
 }
