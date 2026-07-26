@@ -240,3 +240,19 @@ nav {
     background-color: var(--highlight-1) !important;
     transition: all 0.4s;
 }
+
+.introduction-wrapper {
+    color: var(--primary);
+    
+    .introduction-text {
+    }
+
+    a {
+        color: var(--primary);
+        text-decoration: none;
+
+        &&::hover {
+            background-color: var(--highlight-1);
+        }
+    }
+}
