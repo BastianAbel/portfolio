@@ -243,6 +243,7 @@ nav {
 
 .introduction-wrapper {
     color: var(--primary);
+    display: flex;
     
     .introduction-text {
     }
@@ -253,6 +254,28 @@ nav {
 
         &&::hover {
             background-color: var(--highlight-1);
+        }
+    }
+
+    .introduction-image-wrapper {
+        width: 792px;
+        height: 740px;
+        position: relative;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        
+        .img-background {
+            width: 500px;
+            height: 500px;
+        }
+
+        .introduction-image {
+            width: 792px;
+            height: 740px;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
 }
